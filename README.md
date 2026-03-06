@@ -6,48 +6,52 @@
 
 
 # 
-Class: Participant
-	def_init_(self, subj_id):
+class: Participant
+	def__init__(self, subj_id):
 		self.cond_1_trials=None
 		self.cond_2_trials=None
 		self.epoch_time=None
 		
-    self.sub_accuracy=None
-		self.time_point_accuracy= [ ]
+    	self.sub_accuracy=None
+		self.time_point_accuracy=[]
 		self.max_accuracy_window=None
 
 
-Def load_data():
-		x,y=read eeg data
+def load_data():
+	pass
+	#x,y=read data
 
 
-Def equate_trials(x,y):
-	min(x,y) this is for getting the equal num of trials for svm(go with the smaller trials across conditions)
-	Return x, y
+def equate_trials(x,y):
+	pass
+	#min(x,y) this is for getting the equal num of trials for svm(go with the smaller trials across conditions)
+	#Return x, y
 
 
-Def pseudo_trials(data, num_trials):
-  this creates pseudotrials for train and test
+def pseudo_trials(data, num_trials):
+  #this creates pseudotrials for train and test
 	Return matrix
 
-Def combine_matrix (matrix1, matrix2)
-  combine the matrix of two conditions
-	Return full_matrix, y_col
+def combine_matrix(matrix1, matrix2):
+  #combine the matrix of two conditions
+  return full_matrix, y_col
 
 
-Def run_svm(full_matrix, y_col):
-  svm run on every time point and get accuracy at each time point
-	Return snapshot_accuracy
+def run_svm(full_matrix, y_col):
+	#svm run on every time point and get accuracy at each time point
+	return snapshot_accuracy
 
-Def time_window_compare(interval):
-	Cut the time_point_accuracy into n interval, get the average accuracy across diff time window e.g. 100ms, 200ms...
-	Compare accuracy across time window
-	Return time window of highest accuracy
-
-
-Def average_accuracy(time_point_accuracy):
-	Average across all time points
+def time_window_compare(interval):
+	#Cut the time_point_accuracy into n interval, get the average accuracy across diff time window e.g. 100ms, 200ms...
+	#Compare accuracy across time window
+	return time_window_of_highest_accuracy
 
 
-Def group_accuracy(sub_accuracy):
-	Average across group
+def average_accuracy(time_point_accuracy):
+	pass
+	#Average across all time points
+
+
+def group_accuracy(sub_accuracy):
+	pass
+	#Average across group
