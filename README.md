@@ -29,6 +29,7 @@ class Participant:
     def run_svm(full_matrix, y_col): #this method is running the model and return accuracy at each time point
 	def draw_accuracy_plot(self): #this method is comparing the accuracy across time point, plot the accuracy and time point
 	def average_accuracy(trial_accuracy): #this method average accuracy of an interval e.g. collapse accuracy for every 100ms and compare the window accuracy
+	def overall_accuracy(self): #this method is generating the accuracy comparison for conditions(collapsing the decoding accuracy for all participants) and return a graph.
 	
 
 	
